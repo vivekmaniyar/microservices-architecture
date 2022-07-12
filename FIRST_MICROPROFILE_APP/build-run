@@ -1,0 +1,3 @@
+#!/bin/sh
+mvn clean package && docker build -t vivekmaniyar/FIRST_MICROPROFILE_APP .
+docker rm -f FIRST_MICROPROFILE_APP 2>/dev/null || true && docker run -it --name FIRST_MICROPROFILE_APP -p 8080:8080 -p 4848:4848 -p 8181:8181 --name FIRST_MICROPROFILE_APP vivekmaniyar/FIRST_MICROPROFILE_APP

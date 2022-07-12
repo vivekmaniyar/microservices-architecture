@@ -1,0 +1,2 @@
+FROM ivonet/payara:5.193.1
+COPY ./artifact/FIRST_MICROPROFILE_APP.war $DEPLOY_DIR
