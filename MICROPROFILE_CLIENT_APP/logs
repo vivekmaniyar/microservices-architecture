@@ -1,0 +1,2 @@
+#!/bin/sh
+docker logs MICROPROFILE_CLIENT_APP -f
