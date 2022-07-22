@@ -4,6 +4,7 @@
  */
 package com.vivek.microprofile_client_app.service;
 
+import java.util.Collection;
 import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -34,6 +35,13 @@ public interface RemoteClient {
     @Path("add/{x}/{y}")
     @Produces(MediaType.TEXT_PLAIN)
     public String sum(@PathParam("x")Integer x,@PathParam("y")Integer y);
+    
+    @ClientHeaderParam(name = "authorization",value="{generateJWTToken}")
+    @RolesAllowed("chief")
+    @GET
+    @Path("getallstates")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Collection<TblState> getAllStates();
     
     default String generateJWTToken()
     {

@@ -1,7 +1,10 @@
 com\vivek\first_microprofile_app\config\CrossOriginResourceSharingFilter.class
 com\vivek\first_microprofile_app\config\Producers.class
+com\vivek\first_microprofile_app\service\microprofilebean.class
+com\vivek\first_microprofile_app\service\TblState.class
 com\vivek\first_microprofile_app\service\ExampleService.class
 com\vivek\first_microprofile_app\config\BootStrap.class
 com\vivek\first_microprofile_app\service\MSAServlet.class
 com\vivek\first_microprofile_app\service\MSAClient.class
+com\vivek\first_microprofile_app\service\TblState_.class
 com\vivek\first_microprofile_app\service\HealthCheckService.class

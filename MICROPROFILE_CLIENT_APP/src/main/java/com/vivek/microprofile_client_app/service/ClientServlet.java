@@ -6,6 +6,7 @@ package com.vivek.microprofile_client_app.service;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Collection;
 import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -44,6 +45,10 @@ public class ClientServlet extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Servlet ClientServlet at " + rl.get() + "</h1>");
             out.println("<h2>Sum of 40 and 50 is "+ rl.sum(40, 50) + "</h2>");
+            Collection<TblState> states = rl.getAllStates();
+            for(TblState state: states){
+                out.println("<h3>"+state.getStateName()+"-"+state.getStateCode()+"</h3>");
+            }
             out.println("</body>");
             out.println("</html>");
         }
